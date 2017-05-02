@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航</title>
+	<script type="text/javascript" src="./jquery.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;list-style: none;}
+		div{
+			width: 500px;
+			height: 50px;
+			margin: 0 auto;
+		}
+		div ul li{
+			float: left;
+			line-height: 50px;
+			margin-left: 20px;
+		}
+		#sy{position: relative;}
+		#sy1{position: absolute;left: 565px;display: none;}
+		#rm1{position: absolute;left: 625px;display: none;}
+		#gwc1{position: absolute;left: 675px;display: none;}
+	</style>
+</head>
+<body>
+	<div>
+		<ul>
+			<li id="sy">首页
+
+			</li>
+			<li id="rm">热门
+				
+			</li>
+			<li id="gwc">购物车
+
+			</li>
+		</ul>
+	</div>
+	<ul id="sy1">
+		<li>星期一</li>
+		<li>星期二</li>
+		<li>星期三</li>
+	</ul>
+	<ul id="rm1">
+		<li>一月</li>
+		<li>二月</li>
+		<li>三月</li>
+	</ul>
+	<ul id="gwc1">
+		<li>我的购物车</li>
+		<li>我收藏的</li>
+		<li>代支付</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	$("#sy").mouseover(function(){
+		$("#sy1").css("display","block")}	
+	)
+	$("#sy1").mouseleave(function(){
+		$("#sy1").css("display","")}	
+	)
+	$("#sy1 li").hover(function(){
+		$(this).css("background-color","red")},
+		function(){
+			$(this).css("background-color","")}	
+	)
+	$("#rm").mouseover(function(){
+		$("#rm1").css("display","block")}	
+	)
+	$("#rm1").mouseleave(function(){
+		$("#rm1").css("display","")}	
+	)
+	$("#rm1 li").hover(function(){
+		$(this).css("background-color","red")},
+		function(){
+			$(this).css("background-color","")}	
+	)
+	$("#gwc").mouseover(function(){
+		$("#gwc1").css("display","block")}	
+	)
+	$("#gwc1").mouseleave(function(){
+		$("#gwc1").css("display","")}	
+	)
+	$("#gwc1 li").hover(function(){
+		$(this).css("background-color","red")},
+		function(){
+			$(this).css("background-color","")}	
+	)
+
+</script>
+</html>

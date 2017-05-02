@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;list-style: none;}
+		#db{
+			width: 500px;
+			height: 50px;
+			margin-top: 50px;
+			margin-left: 50px; 
+		}
+		#db span{float: left;
+			width: 248px;
+			text-align: center;
+			border: 1px solid #e4e4e4
+		}
+		#db a{
+			text-decoration:none;
+			color: #000;
+			line-height: 50px;
+
+			}
+		#nr{
+			width: 500px;
+			height: 300px;
+			margin-left: 50px;
+			background: red;
+			}
+		#nr #nr1{display: block;}
+		#nr #nr2{display: none;}
+	</style>
+</head>
+<body>
+	<div id="db">
+		<span id="db1"><a href="">热门主题</a></span>
+		<span id="db2"><a href="">我要解答</a></span>
+	</div>
+	<div id="nr">
+		<div id="nr1">
+			<ul>
+				<li>【重要】地图SDK和鹰眼开发者近期请勿升级 Xcode 8.3</li>
+				<li>iphone 6 plus 机型在移动端频繁缩放会导致客户端崩溃</li>
+				<li>百度地图初始化问题</li>
+				<li>判断经纬度是否在国内</li>
+			</ul>
+		</div>
+		<div id="nr2">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>百度地图初始化问题</li>
+				<li>判断经纬度是否在国内</li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$("#db2").click(function(){
+		$("#nr2").css("display","block"),
+		$("#nr1").css("display","none")
+	})
+	$("#db1").click(function(){
+		$("#nr1").css("display","block"),
+		$("#nr2").css("display","none")
+	})
+</script>
+</html>

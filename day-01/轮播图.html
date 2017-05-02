@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<style>
+		*{
+			margin: 0;padding: 0;
+			list-style: none;
+		}
+		#ck{
+			width: 780px;
+			height: 330px;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+		#ck ul{width: 31200px;}
+		#ck ul li {float: left;
+			width: 780px;
+			height: 330px;
+		}
+	</style>
+	<script src="./jquery.js" charset="utf-8"></script>
+</head>
+<body>
+	<div id="ck">
+		<ul>
+			<li><img src="img/1.jpg"></li>
+			<li><img src="img/2.jpg"></li>
+			<li><img src="img/3.jpg"></li>
+			<li><img src="img/4.jpg"></li>
+
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+	$(" ul li").animate({"left":100},1000);
+</script>
+</html>

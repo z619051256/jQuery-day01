@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="./jquery.js"></script>
+	<style type="text/css">
+		*{margin: 0;padding: 0;list-style: none;}
+		#box{
+			width: 250px; 
+			height: 1000px;
+			background-color: #2b2f3e;
+			}
+		#box .hx{
+			margin: 50px 0 0 10px;position: absolute;
+			}
+		#box .hx .hx1{color: #fff;}
+		#box .nr{width: 200px;display: none;}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<ul class="hx">
+			<li class="hx1">核心
+				<ul class="nr">
+					<li>jQuery([sel,[context]])</li>
+					<li>jQuery(html,[ownerDoc])1.8*</li>
+					<li>jQuery(callback)</li>
+					<li>jQuery.holdReady(hold)1.6+</li>
+					<li>each(callback)</li>
+					<li>size()</li>
+					<li>length</li>
+					<li>selector</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</body>
+<script type="text/javascript">
+
+	$(".hx1").click(function() {
+		$(".nr").toggle()
+	});
+	$(".nr li").hover(function(){
+		$(this).css("background-color","red")},
+		function(){
+		$(this).css("background-color","")}
+	)
+</script>
+</html>
