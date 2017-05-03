@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	
+	<script src="./jquery.js" charset="utf-8"></script>
 	<style>
 		*{
             margin: 0;
@@ -35,16 +35,16 @@
             height: 330px;
         }
 	</style>
-	<script src="./jquery.js" charset="utf-8"></script>
+	
 </head>
 <body>
 	<div id="bk">
 		<div id="ck">
 			<ul>
-				<li><img src="img/1.jpg"></li>
-				<li><img src="img/2.jpg"></li>
-				<li><img src="img/3.jpg"></li>
-				<li><img src="img/4.jpg"></li>
+				<li class="one"><img src="img/1.jpg"></li>
+				<li class="two"><img src="img/2.jpg"></li>
+				<li class="three"><img src="img/3.jpg"></li>
+				<li class="four"><img src="img/4.jpg"></li>
 				
 
 			</ul>
@@ -52,17 +52,15 @@
 	</div>
 </body>
 <script type="text/javascript">
-	$("#ck ul li:first").clone().appendTo("#ck ul")
 	var i = 0;
-	function next (){
-		i++
-		$("#ck").animate({"left": -780*i},1000,function(){
-			if (i>3) {
-				i=0
-				$(this).css("left",0);
-			}
-		})
+	function next() {
+		$("#ck ul li").eq(i).fadeOut(1000)
+		i++;
+		if (i>3) {
+			i=0;
+		}
+		$("#ck ul li").eq(i).fadeIn(1000)
 	}
-	setInterval(next,2000);
+	setInterval(next,1000)
 </script>
 </html>

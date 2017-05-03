@@ -11,6 +11,17 @@
 	<button>提交</button>
 </body>
 <script type="text/javascript">
-	
+	$("input[type='checkbox']").click(function(){  // 点击勾选框
+    var check = $("input[type='checkbox']").prop("checked"); //获取勾选框状态
+    var btn =  $("input[type=button]");       // 获取按钮
+    if(check){                               // 查看勾选框是否勾选
+        btn.attr("disabled",true);          //取消disabled
+        alert("可以提交")
+        }else{
+        btn.attr("disabled",false);            //执行disabled
+        alert("不可以提交")
+        }
+    })
+
 </script>
 </html>

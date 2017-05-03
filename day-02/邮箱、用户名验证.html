@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js" charset="utf-8"></script>
+</head>
+<body>
+	<input type="" name=""><button>邮箱认证</button>
+	<input type="" name=""><button>用户名</button>
+</body>
+	<script type="text/javascript">
+		var yx = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+		var yhm = /^[a-z0-9_-]{3,16}$/;
+		$("button").eq(0).click(function() {
+			if (yx.test($('input').eq(0).val())) {
+				alert("OK")
+			}else {
+				alert("buOK")
+			}
+		});
+			$("button").eq(1).click(function() {
+			if (yhm.test($('input').eq(1).val())) {
+				alert("OK")
+			}else {
+				alert("buOK")
+			}
+		});
+	</script>
+</html>
